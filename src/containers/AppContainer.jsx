@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
-import SwipeableViews from "react-swipeable-views";
 import { Sidebar } from "../components/sidebar";
 import MainLayout from "../layouts/MainLayout";
 import MainContext from "../context/index";
@@ -64,7 +63,6 @@ const AppContainer = () => {
         </SidebarContainer>
         <DrawerActionButton />
         <PageContainer>
-          <SwipeableViews index={pageNumber} handleChange={handlePageNumber} disabled>
             <Page pageNumber={pageNumber} index={0}>
               <Home title="وب سایت عرفان فروزی" />
             </Page>
@@ -86,7 +84,6 @@ const AppContainer = () => {
             <Page pageNumber={pageNumber} index={4}>
               <Contact title="وب سایت عرفان فروزی |  ارتباط با من" />
             </Page>
-          </SwipeableViews>
         </PageContainer>
       </MainLayout>
     </MainContext.Provider>
